@@ -1,3 +1,5 @@
+<img src="{{section.settings.image | img_url: '400x'}}" alt="">
+{{section.settings.id}}
 {%- for block in section.blocks -%}
     {%- case block.type -%}
         {%- when 'announcement' -%}
@@ -30,6 +32,10 @@
             "type": "text",
             "id": "id",
             "label": "fzm"
+        }, {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Test Image"
         }
     ],
     "blocks": [
