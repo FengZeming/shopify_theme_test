@@ -12,7 +12,7 @@
                                 {% render 'icon-arrow' %}
                             {%- endif -%}
                         </p>
-                              {%- if block.settings.link != blank -%}
+                        {%- if block.settings.link != blank -%}
                         </a>
                     {%- endif   -%}
                 {%- endif -%}
@@ -26,8 +26,8 @@
     "name": "t:sections.announcement-bar.name",
     "max_blocks": 12,
     "settings": [],
-           "blocks": [
-              {
+    "blocks": [
+        {
             "type": "announcement",
             "name": "t:sections.announcement-bar.blocks.announcement.name",
             "settings": [
