@@ -1,5 +1,6 @@
 <div class="border-y">
     <header class="header items-center page-width">
+        <!-- 左侧 logo start -->
         <div
             class="header__logo mx-auto my-2 md:my-0 md:mr-auto md:ml-0"
             style="max-width: {{ section.settings.logo_width }}px;">
@@ -13,8 +14,11 @@
                 </a>
             {% endif %}
         </div>
-
+        <!-- 左侧 logo end -->
+        <!-- 中间的菜单 start -->
         <nav class="header__menu flex" x-data>
+
+            <!-- 移动设备显示菜单按钮 左侧 -->
             <button @click="$dispatch('toggle-menu')" class="md:hidden" type="button">
                 {% render 'icon-menu', class: 'w-10' %}
             </button>
@@ -44,7 +48,9 @@
                 {% endfor %}
             </ul>
         </nav>
+        <!-- 中间的菜单 end -->
 
+        <!-- 右侧的按钮 start -->
         <div
             @cart-count-updated.window="cart_count = $event.detail"
             class="header__icons flex items-center justify-end space-x-5"
@@ -73,11 +79,14 @@
                 </span>
             </button>
         </div>
+        <!-- 右侧的按钮 end -->
     </header>
 
-    {% render 'mobile-menu' %}
+    <!-- 移动设备的 左侧边栏 start --> {% render 'mobile-menu' %}
 </div>
-{% assign attr = 'type="application/ld+json"' %}
+
+<!--  --> {% assign attr = 'type="application/ld+json"' %} <!--  -->
+
 <script {{attr}}>
     {
         "@context": "http://schema.org",
