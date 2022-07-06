@@ -6,6 +6,7 @@
   "author": "Eason.Feng <eason.feng@cettire.com>",
   "license": "MIT",
   "scripts": {
+    
     "start": "npx mix watch"
   },
   "devDependencies": {

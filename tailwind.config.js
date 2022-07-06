@@ -11,6 +11,10 @@ module.exports = {
     './templates/customers/*.liquid',
   ],
   theme: {
+    flex: {
+      1: '1',
+      2: '2',
+    },
     extend: {},
   },
   plugins: [],

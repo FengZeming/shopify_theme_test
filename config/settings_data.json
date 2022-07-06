@@ -323,6 +323,14 @@
         "footer": {
           "type": "footer",
           "blocks": {
+            "53c1c391-33d3-4045-94f0-77c637d06874": {
+              "type": "image",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/unick-logo_1.png",
+                "image_width": 100,
+                "alignment": "center"
+              }
+            },
             "footer-0": {
               "type": "link_list",
               "settings": {
@@ -346,6 +354,7 @@
             }
           },
           "block_order": [
+            "53c1c391-33d3-4045-94f0-77c637d06874",
             "footer-0",
             "footer-1",
             "footer-2"

@@ -1,0 +1,83 @@
+<div
+    @toggle-menu.window="openMenu=!openMenu"
+    aria-labelledby="slide-over-title"
+    aria-modal="true"
+    class="relative z-10"
+    role="dialog"
+    x-data="{openMenu:false}"
+    x-show="openMenu">
+
+    <!-- 背景蒙版 start -->
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+    <!-- 背景蒙版 end -->
+    <div class="fixed inset-0 overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden">
+            <!-- 左边内容 start -->
+            <div class="pointer-events-none fixed inset-y-0 left-0 flex max-w-full w-screen">
+                <!-- 左侧 -->
+                <div
+                    class="pointer-events-auto relative w-8/12 "
+                    x-show="openMenu"
+                    x-transition:enter-end="translate-x-0 opacity-100"
+                    x-transition:enter-start="-translate-x-full opacity-0"
+                    x-transition:enter="transform transition ease-in-out duration-500 sm:duration-700"
+                    x-transition:leave-end="-translate-x-full opacity-0"
+                    x-transition:leave-start="translate-x-0"
+                    x-transition:leave="transform transition ease-in-out duration-500 sm:duration-700">
+
+                    <div class="absolute top-0 right-0 -mr-8 flex pt-4 pl-2 sm:-mr-10 sm:pl-4">
+
+                        <!-- 关闭按钮 start -->
+                        <button
+                            @click="openMenu =false"
+                            class="rounded-md text-gray-300 hover:text-white focus:outline-none focus:ring-2
+                                focus:ring-white"
+
+                            type="button">
+                            <span class="sr-only">Close panel</span>
+                            <!-- Heroicon name: outline/x -->
+                            <svg
+                                aria-hidden="true"
+                                class="h-6 w-6"
+                                fill="none"
+                                stroke-width="2"
+                                stroke="currentColor"
+                                viewbox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <!-- 关闭按钮 end -->
+                    </div>
+
+                    <div class="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
+
+                        <!-- 面板标题 start -->
+                        <div class="px-4 sm:px-6">
+                            <h2
+                                @click="openMenu = false"
+                                class="text-lg font-medium text-gray-900"
+                                id="slide-over-title">Panel title</h2>
+                        </div>
+                        <!-- 面板标题 end -->
+                        <!-- 面板内容 start -->
+                        <div class="relative mt-6 flex-1 px-4 sm:px-6">
+                            <!-- Replace with your content -->
+                            <div class="absolute inset-0 px-4 sm:px-6">
+                                <div aria-hidden="true" class="h-full border-2 border-dashed border-gray-200"></div>
+                            </div>
+                            <!-- /End replace -->
+                        </div>
+                        <!-- 面板内容 end -->
+                    </div>
+                </div>
+
+                <!-- 右侧 -->
+                <div @click="openMenu = false" class="flex-1 pointer-events-auto"></div>
+
+            </div>
+            <!-- 左边内容 end -->
+
+        </div>
+    </div>
+</div> 
