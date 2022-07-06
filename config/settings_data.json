@@ -130,6 +130,14 @@
       "footer": {
         "type": "footer",
         "blocks": {
+          "9a813321-9672-43bd-8f6f-c50883d966dd": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/darma-tall_160x_685996fc-f05e-45ec-bba9-5691d9970756.webp",
+              "image_width": 140,
+              "alignment": "center"
+            }
+          },
           "footer-0": {
             "type": "link_list",
             "settings": {
@@ -153,6 +161,7 @@
           }
         },
         "block_order": [
+          "9a813321-9672-43bd-8f6f-c50883d966dd",
           "footer-0",
           "footer-1",
           "footer-2"
